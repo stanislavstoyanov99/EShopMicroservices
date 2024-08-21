@@ -31,7 +31,7 @@ namespace BuildingBlocks.Behaviors
             // if the request is greater than 3 seconds, then log warning
             if (timeTaken.Seconds > 3)
             {
-                logger.LogWarning($"[PERFORMANCE] The request {requestName} took {timeTaken.Seconds}");
+                logger.LogWarning($"[PERFORMANCE] The request {requestName} took {timeTaken.Seconds} second/s");
             }
 
             logger.LogInformation($"[END] Handled {requestName} with {responseName}");
