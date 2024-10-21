@@ -8,7 +8,7 @@
 
         public CustomerId CustomerId { get; private set; } = default!;
 
-        public Name Name { get; private set; } = default!;
+        public OrderName Name { get; private set; } = default!;
 
         public Address ShippingAddress { get; private set; } = default!;
 
@@ -25,7 +25,7 @@
         }
 
         public static Order Create(
-            OrderId id, CustomerId customerId, Name name, Address shippingAddress, Address billingAddress, Payment payment)
+            OrderId id, CustomerId customerId, OrderName name, Address shippingAddress, Address billingAddress, Payment payment)
         {
             var order = new Order
             {
@@ -43,7 +43,7 @@
             return order;
         }
 
-        public void Update(Name name, Address shippingAddress, Address billingAddress, Payment payment, OrderStatus status)
+        public void Update(OrderName name, Address shippingAddress, Address billingAddress, Payment payment, OrderStatus status)
         {
             Name = name;
             ShippingAddress = shippingAddress;

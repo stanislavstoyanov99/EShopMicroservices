@@ -1,6 +1,4 @@
-﻿using BuildingBlocks.CQRS;
-
-namespace Ordering.Application.Orders.Commands.CreateOrder
+﻿namespace Ordering.Application.Orders.Commands.CreateOrder
 {
     public class CreateOrderHandler(IApplicationDbContext dbContext)
         : ICommandHandler<CreateOrderCommand, CreateOrderResult>
@@ -39,7 +37,7 @@ namespace Ordering.Application.Orders.Commands.CreateOrder
             var newOrder = Order.Create(
                 id: OrderId.Of(Guid.NewGuid()),
                 customerId: CustomerId.Of(orderDto.CustomerId),
-                name: Name.Of(orderDto.OrderName),
+                name: OrderName.Of(orderDto.OrderName),
                 shippingAddress: shippingAddress,
                 billingAddress: billingAddress,
                 payment: Payment.Of(

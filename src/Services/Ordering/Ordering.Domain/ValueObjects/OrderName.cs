@@ -1,19 +1,19 @@
 ﻿namespace Ordering.Domain.ValueObjects
 {
-    public record Name
+    public record OrderName
     {
         private const int DefaultLength = 5;
 
         public string Value { get; }
 
-        private Name(string value) => Value = value;
+        private OrderName(string value) => Value = value;
 
-        public static Name Of(string value)
+        public static OrderName Of(string value)
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(value);
             ArgumentOutOfRangeException.ThrowIfNotEqual(value.Length, DefaultLength);
 
-            return new Name(value);
+            return new OrderName(value);
         }
     }
 }
