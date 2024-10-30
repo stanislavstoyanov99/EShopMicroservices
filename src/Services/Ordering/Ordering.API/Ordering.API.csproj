@@ -7,6 +7,7 @@
     <UserSecretsId>41eed3ae-a202-4dd7-8180-31d3780f534e</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,8 +18,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-	<PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.7.0" />
-	<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.7.0" />
+	<PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.11.0" />
+	<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.11.0" />
 	<PackageReference Include="Carter" Version="8.2.1" />
   </ItemGroup>
 
