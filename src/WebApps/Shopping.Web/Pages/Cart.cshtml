@@ -1,5 +1,5 @@
 ﻿@page
-@model Models.Basket.ShoppingCartModel
+@model Shopping.Web.Pages.CartModel
 @{
     ViewData["Title"] = "Cart";
 }
@@ -34,7 +34,7 @@
                     </thead>
                     <tbody>
 
-                        @foreach (var cartItem in Model.Items)
+                        @foreach (var cartItem in Model.Cart.Items)
 
                         {
                             <tr>
@@ -60,7 +60,7 @@
                             <td></td>
                             <td></td>
                             <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>@Model.TotalPrice $</strong></td>
+                            <td class="text-right"><strong>@Model.Cart.TotalPrice $</strong></td>
                         </tr>
                     </tbody>
                 </table>
